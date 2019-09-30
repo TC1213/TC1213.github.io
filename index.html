@@ -8,7 +8,7 @@
              $("#studentnumber").text(result.studentnumber); 
           })
       })
-      $("#bth").click(function(){
+      $("#btn").click(function(){
           console.log("111111")
           $.get("./data1.json",function(result){
              $("#studentname").text(result.studentname); 
@@ -19,7 +19,7 @@
 <h1>我叫<span id="studentname"></span></h1>
     <p>我的学号是<span id="studentnumber"></span>
         <br>
-        <div><button id="bth">点击</button></div>
+        <div><button id="btn">点击</button></div>
         <br>
         <img src="matrix.png" style="border-radius: 40px 40px 40px 40px">
         <br>
