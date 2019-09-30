@@ -1,4 +1,5 @@
 <html>
+    <head></head>
 <body background="#000">
     <script src="jquery-3.4.1.js"></script>
     <script>
@@ -6,20 +7,20 @@
           $.get("./data.json",function(result){
              $("#studentname").text(result.studentname); 
              $("#studentnumber").text(result.studentnumber); 
-          })
+          });
       })
       $("#btn").click(function(){
           console.log("111111")
           $.get("./data1.json",function(result){
              $("#studentname").text(result.studentname); 
              $("#studentnumber").text(result.studentnumber); 
-          })
+          });
       })   
     </script>
 <h1>我叫<span id="studentname"></span></h1>
     <p>我的学号是<span id="studentnumber"></span>
         <br>
-        <button id="btn">点击</button>
+        <button id="btn">下一个</button>
         <br>
         <img src="matrix.png" style="border-radius: 40px 40px 40px 40px">
         <br>
