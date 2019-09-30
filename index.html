@@ -9,6 +9,7 @@
           })
       })
       $("#bth").click(function(){
+          console.log("111111")
           $.get("./data1.json",function(result){
              $("#studentname").text(result.studentname); 
              $("#studentnumber").text(result.studentnumber); 
