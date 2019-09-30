@@ -9,7 +9,7 @@
           })
       })
       $("#bth").click(function(){
-          $.get("/data2.json",function(result){
+          $.get("/data1.json",function(result){
              $("#studentname").text(result.studentname); 
              $("#studentnumber").text(result.studentnumber); 
           })
@@ -17,6 +17,7 @@
     </script>
 <h1>我叫<span id="studentname"></span></h1>
     <p>我的学号是<span id="studentnumber"></span>
+        <br>
         <button id = "bth">点击</button>
         <br>
         <img src="matrix.png" style="border-radius: 40px 40px 40px 40px">
