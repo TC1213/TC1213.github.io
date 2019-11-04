@@ -14,14 +14,18 @@
         <script>
                 $(function(){
                     var callback=function(result){
-                       $("#studentname").text(result.studentname); 
-                       $("#studentnumber").text(result.studentnumber); 
+                       $("#studentname").text(result.myname); 
+                       $("#studentnumber").text(result.mynumber); 
                     }
-                    $.get("http://127.0.0.1:8585/data.json",callback);
-;
+                    $.ajax("http://127.0.0.1:8585/data.json",{
+                        type:"POST",
+                        data:"AAAAA",
+                        success:callback,
+                    })
                 })
+
                 $("#btn").click(function(){
-                    $.get("http://127.0.0.1:8585/data1.json",function(result){
+                    $.get("http://127.0.0.1:5500/data1.json",function(result){
                        $("#studentname").text(result.studentname); 
                        $("#studentnumber").text(result.studentnumber); 
                     });
