@@ -1,0 +1,34 @@
+<html>
+    <head></head>
+<body background="#000">
+    <script src="jquery-3.4.1.js"></script>
+<div>
+    账号
+        <input type="text" id="name">
+</div>
+<div>
+    密码
+        <input type="password" id="password">
+</div>
+        <br>
+        <button id="btn">登陆</button>
+
+
+        <script>
+                $(function(){
+                    $("#btn").click(function(){
+                      $.ajax("http://10.30.201.85:8585/Login",{
+                        type:"POST",//get简单快捷，内容在封面，post内容在封内，可以传多个内容
+                        contentType:'application/json',
+                        data:JSON.stringify({name:$("#name").val(),password:$("#password").val()}),
+                        success:(function(result){
+                           if(result.result=='success'){
+                               location.href='index.html'
+                           }
+                           })
+                      })
+                    })
+                })
+              </script>
+</body>
+</html>

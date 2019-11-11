@@ -17,15 +17,15 @@
                        $("#studentname").text(result.myname); 
                        $("#studentnumber").text(result.mynumber); 
                     }
-                    $.ajax("http://127.0.0.1:8585/data.json",{
-                        type:"POST",
+                    $.ajax("http://10.30.201.85:8585/data.json",{
+                        type:"POST",//get简单快捷，内容在封面，post内容在封内，可以传多个内容
                         data:"AAAAA",
                         success:callback,
                     })
                 })
 
                 $("#btn").click(function(){
-                    $.get("http://127.0.0.1:5500/data1.json",function(result){
+                    $.get("http://10.30.201.85:5500/data1.json",function(result){
                        $("#studentname").text(result.studentname); 
                        $("#studentnumber").text(result.studentnumber); 
                     });
